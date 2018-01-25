@@ -44,3 +44,8 @@ body {
 .jumbotron p.active {
      color: #1f6ddd;
 }
+
+.des-images {
+	background-image: url('../images/test.jpeg');
+	height: 20px;
+}

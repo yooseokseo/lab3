@@ -26,17 +26,19 @@ function projectClick(e) {
 	$(this).css("background-color", "#7fff00");
 	var containingProject = $(this).closest(".project");
     var description = $(containingProject).find(".project-description");
-		
+
     if (description.length == 0) {
-
        $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
+			 $(".project-description > p").append("<div class='project-images'></div>");
+			 $(".project-description").hide();
 
 
 
-
-
-    } else {
-
-			  $(".project-description").fadeOut();
     }
+
+		$(".project-description").fadeToggle("slow", "linear");
+		$(".project-images").fadeToggle("slow", "linear");
+		$(".project-images").addClass("des-images");
+
+
 }
